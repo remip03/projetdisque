@@ -94,7 +94,7 @@ class fonctionAdminChanteur{
 
     //   fonction pour afficher les données d'un chanteur et le modifier
     public function showChanteur($db){
-            $idChanteur = $_GET['idChanteur'];
+            $idChanteur = $_GET['id'];
             $sql = "SELECT * FROM `chanteur` WHERE idChanteur= :idChanteur";
             $query = $db->prepare($sql);
             $query->bindValue(':idChanteur', $idChanteur, PDO::PARAM_INT);
